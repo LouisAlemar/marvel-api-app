@@ -1,0 +1,13 @@
+{
+	"name": "marvel-api-app",
+	"version": "0.0.1",
+	"description": "React app using Marvel API",
+	"main": "index.js",
+	"repository": "https://github.com/LouisAlemar/marvel-api-app",
+	"author": "Louis Alemar",
+	"license": "GNU",
+	"scripts": {
+		"start": "node index.js",
+		"list": "ls -la"
+	}
+}
