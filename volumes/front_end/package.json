@@ -7,7 +7,14 @@
 	"author": "Louis Alemar",
 	"license": "GNU",
 	"scripts": {
-		"start": "node index.js",
-		"list": "ls -la"
+		"start": "npm run start:install --verbose && npm run start:app --verbose",
+		"start:install": "npm install",
+		"start:app": "webpack-dev-server --color"
+	},
+	"devDependencies": {
+		"html-webpack-plugin": "*",
+		"webpack": "*",
+		"webpack-cli": "*",
+		"webpack-dev-server": "*"
 	}
 }
