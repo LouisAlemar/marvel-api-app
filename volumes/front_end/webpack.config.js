@@ -20,6 +20,8 @@ module.exports = {
 	  publicPath: '/'
 	},
 	plugins: [
-		new HtmlWebpackPlugin()
+		new HtmlWebpackPlugin({
+			favicon: "./src/images/favicon.ico"
+		})
 	]
 }
