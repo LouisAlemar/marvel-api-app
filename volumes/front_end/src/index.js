@@ -1,1 +1,6 @@
-console.log('testing from src folder');
+import React from 'react';
+import { render } from 'react-dom';
+
+import App from './components/App';
+
+render(<App />, document.getElementById(APP_MOUNT_ID));
