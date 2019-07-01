@@ -3,7 +3,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
-const { WEBSITE_NAME, APP_MOUNT_ID } = process.env
+const { WEBSITE_NAME, APP_MOUNT_ID, ACCESS_TOKEN } = process.env
 
 module.exports = {
 	entry: {
@@ -35,7 +35,8 @@ module.exports = {
 		appMountId: 'react-root'
 	}),
 	new webpack.DefinePlugin({
-		APP_MOUNT_ID: JSON.stringify(APP_MOUNT_ID)
+		APP_MOUNT_ID: JSON.stringify(APP_MOUNT_ID),
+		ACCESS_TOKEN: JSON.stringify(ACCESS_TOKEN)
 	})
 	]
 }
