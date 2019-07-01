@@ -13,8 +13,11 @@
 		"build": "webpack --config webpack.prod.js"
 	},
 	"dependencies": {
+		"axios": "*",
 		"react": "*",
 		"react-dom": "*",
+		"react-redux": "*",
+		"reactstrap": "*",
 		"redux": "*",
 		"redux-saga": "*"
 	},
