@@ -14,7 +14,9 @@
 	},
 	"dependencies": {
 		"react": "*",
-		"react-dom": "*"
+		"react-dom": "*",
+		"redux": "*",
+		"redux-saga": "*"
 	},
 	"devDependencies": {
 		"@babel/core": "*",
