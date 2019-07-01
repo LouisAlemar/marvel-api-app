@@ -1,9 +1,9 @@
 {
-	"name": "marvel-api-app",
+	"name": "superhero-api-app",
 	"version": "0.0.1",
-	"description": "React app using Marvel API",
+	"description": "React app using SuperHero API",
 	"main": "index.js",
-	"repository": "https://github.com/LouisAlemar/marvel-api-app",
+	"repository": "https://github.com/LouisAlemar/superhero-api-app",
 	"author": "Louis Alemar",
 	"license": "GNU",
 	"scripts": {

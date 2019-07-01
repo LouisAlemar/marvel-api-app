@@ -1,1 +1,1 @@
-docker logs -f marvel-api-app_front_end_1
+docker logs -f superhero-api-app_front_end_1

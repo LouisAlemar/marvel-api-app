@@ -1,1 +1,1 @@
-## Marvel API App
+## SuperHero API App
