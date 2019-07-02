@@ -4,12 +4,21 @@ import axios from 'axios';
 import {Provider} from 'react-redux';
 import {createStore, applyMiddleware} from 'redux';
 import createSagaMiddleware from 'redux-saga';
+import "@babel/polyfill/noConflict";
 
 import App from './components/App';
 import reducers from './reducers';
+import rootSaga from './sagas';
 
-const store = createStore(reducers);
+axios.defaults.withCredentials = true;
+axios.defaults.baseURL = `https://superheroapi.com/api/${ACCESS_TOKEN}`;
+
+const sagaMiddleWare = createSagaMiddleware();
+
+const store = createStore(reducers, applyMiddleware(sagaMiddleWare));
+
+sagaMiddleWare.run(rootSaga);
 
 console.log(store.getState())
 
-render(<App />, document.getElementById(APP_MOUNT_ID));
+render(<Provider store={store}><App /></Provider>, document.getElementById(APP_MOUNT_ID));

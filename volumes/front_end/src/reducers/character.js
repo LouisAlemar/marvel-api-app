@@ -1,12 +1,12 @@
-import {Types} from '../actions/characters';
+import {Types} from '../actions/character';
 
 const INITIAL_STATE = {
 	items: []
 }
 
-export default function characters(state = INITIAL_STATE, action){
+export default function character(state = INITIAL_STATE, action){
 	switch(action.type){
-		case Types.GET_CHARACTERS_SUCCESS:{
+		case Types.GET_CHARACTER_SUCCESS:{
 			return {
 				...state,
 				items: action.payload.items
