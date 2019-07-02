@@ -4,7 +4,8 @@ import axios from 'axios';
 import {Provider} from 'react-redux';
 import {createStore, applyMiddleware} from 'redux';
 import createSagaMiddleware from 'redux-saga';
-import "@babel/polyfill/noConflict";
+import '@babel/polyfill/noConflict';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import App from './components/App';
 import reducers from './reducers';

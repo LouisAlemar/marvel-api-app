@@ -15,6 +15,7 @@
 	"dependencies": {
 		"axios": "*",
 		"@babel/polyfill": "*",
+		"bootstrap": "*",
 		"react": "*",
 		"react-dom": "*",
 		"react-redux": "*",
@@ -29,7 +30,9 @@
 		"@babel/preset-react": "*",
 		"babel-loader": "*",
 		"clean-webpack-plugin": "*",
+		"css-loader": "*",
 		"html-webpack-plugin": "*",
+		"style-loader": "*",
 		"webpack": "*",
 		"webpack-cli": "*",
 		"webpack-dev-server": "*",
