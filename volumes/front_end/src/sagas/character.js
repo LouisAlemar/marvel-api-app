@@ -7,6 +7,7 @@ function* getCharacter(action){
 		const result = yield call(api.getCharacter, {
 			name: action.payload.name
 		})
+		console.log(result)
 		yield put(actions.getCharacterSuccess({
 			items: result
 		}))

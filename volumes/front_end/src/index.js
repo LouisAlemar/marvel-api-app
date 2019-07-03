@@ -20,6 +20,6 @@ const store = createStore(reducers, applyMiddleware(sagaMiddleWare));
 
 sagaMiddleWare.run(rootSaga);
 
-console.log(store.getState())
+// console.log(store.getState())
 
 render(<Provider store={store}><App /></Provider>, document.getElementById(APP_MOUNT_ID));
