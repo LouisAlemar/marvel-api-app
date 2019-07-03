@@ -101,7 +101,7 @@ htmlWebpackPlugin.options.scripts = htmlWebpackPlugin.options.scripts || []
       integrity="<%= htmlWebpackPlugin.files.jsIntegrity[htmlWebpackPlugin.files.js.indexOf(htmlWebpackPlugin.files.chunks[key].entry)] %>"
       crossorigin="<%= webpackConfig.output.crossOriginLoading %>"></script><%
       } else { %>
-    <script src="<%= htmlWebpackPlugin.files.chunks[key].entry %>" type="text/javascript"></script><%
+    <%
       } %><%
     } %><%
 
