@@ -11,15 +11,12 @@ import App from './components/App';
 import reducers from './reducers';
 import rootSaga from './sagas';
 
-axios.defaults.withCredentials = true;
-axios.defaults.baseURL = `https://superheroapi.com/api/${ACCESS_TOKEN}`;
+axios.defaults.baseURL = `https://superheroapi.com/api.php/${ACCESS_TOKEN}`;
 
 const sagaMiddleWare = createSagaMiddleware();
 
 const store = createStore(reducers, applyMiddleware(sagaMiddleWare));
 
 sagaMiddleWare.run(rootSaga);
-
-// console.log(store.getState())
 
 render(<Provider store={store}><App /></Provider>, document.getElementById(APP_MOUNT_ID));

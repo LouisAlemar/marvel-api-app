@@ -3,7 +3,7 @@ export const Types = {
 	GET_CHARACTER_SUCCESS: 'character/get_character_success'
 }
 
-export const getCharacterRequest = (name) => ({
+export const getCharacterRequest = ({name}) => ({
 	type: Types.GET_CHARACTER_REQUEST,
 	payload: {
 		name
