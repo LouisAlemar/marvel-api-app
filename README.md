@@ -32,10 +32,10 @@ In order to get this app up and running, you'll need to follow these steps in or
 
 ### Additional Commands
 
-* Take down container
+* Take down docker container
 
 		.sh/down
 
-* List all containers
+* List all docker containers
 
 		.sh/psa
