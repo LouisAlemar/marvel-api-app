@@ -26,7 +26,7 @@ class SearchForm extends Component{
 
 	render(){
 		return(
-			<Form onSubmit={this.handleSubmit}>
+			<Form className="search-form" onSubmit={this.handleSubmit}>
 				<FormGroup>
 					<Label>Character Search:</Label>
 					<Input required placeholder="Name Of Character"  onChange={this.handleNameChange} value={this.state.name} />

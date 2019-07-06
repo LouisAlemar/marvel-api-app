@@ -8,7 +8,7 @@ class CharacterList extends Component{
 
 	render(){
 		return(
-			<div>
+			<div className="character-list">
 				{this.props.characters.map((character, key) => {
 					return(
 						<CharacterItem key={character.id} character={character} />

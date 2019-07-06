@@ -8,7 +8,7 @@ class CharacterItem extends Component{
 	render(){
 		console.log(this.props.character)
 		return(
-			<div>
+			<div className="character-item">
 				<h3>{this.props.character.name}</h3>
 				<img src={this.props.character.image.url} alt="" style={{width: '20%'}} />
 			</div>
