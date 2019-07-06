@@ -39,6 +39,7 @@ $character-item-margin: 10px;
 			.image-container{
 				height: 100%;
 				padding-top: (100% / 1);
+				transition: .2s all;
 				.character-pic{
 					position: absolute;
 					top: 0;
