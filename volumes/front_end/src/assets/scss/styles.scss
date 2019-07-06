@@ -1,3 +1,57 @@
+$character-item-margin: 10px;
+
 .app-container{
-	background-color: #eee;
+	margin: 0 auto;
+	padding: 20px;
+	max-width: 1000px;
+	.character-list{
+		display: flex;
+		flex-wrap: wrap;
+		margin-left: #{$character-item-margin * -1};
+		margin-right: #{$character-item-margin * -1};
+		.character-item{
+			position: relative;
+			margin: $character-item-margin;
+			width: calc(33.333% - #{$character-item-margin * 2});
+			background-color: #000;
+			&:hover{
+				cursor: pointer;
+				.name-container{
+					z-index: 999;
+				}
+				.image-container{
+					opacity: 0.3;
+				}
+			}
+			.name-container{
+				position: absolute;
+				height: 100%;
+				width: 100%;
+				z-index: -9999;
+				.character-name{
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					height: 100%;
+					color: #fff;
+				}
+			}
+			.image-container{
+				height: 100%;
+				padding-top: (100% / 1);
+				.character-pic{
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					z-index: 99;
+					opacity: 1;
+					background-size: cover;
+					background-repeat: no-repeat;
+					background-position: 50% 50%;
+				}
+			}
+		}
+	}
 }

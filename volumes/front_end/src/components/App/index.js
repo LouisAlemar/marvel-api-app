@@ -18,7 +18,7 @@ class App extends Component{
 
 	render(){
 		return(
-			<div style={{margin: '0 auto', padding: '20px', maxWidth: '1000px'}} className="app-container">
+			<div className="app-container">
 				<SearchForm onSubmit={this.handleSubmit} />
 				<CharacterList characters={this.props.characters.items} />
 			</div>

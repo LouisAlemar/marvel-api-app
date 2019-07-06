@@ -9,8 +9,12 @@ class CharacterItem extends Component{
 		console.log(this.props.character)
 		return(
 			<div className="character-item">
-				<h3>{this.props.character.name}</h3>
-				<img src={this.props.character.image.url} alt="" style={{width: '20%'}} />
+				<div className="name-container">
+					<h3 className="character-name">{this.props.character.name}</h3>
+				</div>
+				<div className="image-container">
+					<div className="character-pic" style={{backgroundImage: `url(${this.props.character.image.url})`}}></div>
+				</div>
 			</div>
 		)
 	}
