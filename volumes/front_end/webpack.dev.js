@@ -11,5 +11,27 @@ module.exports = merge(common, {
 		port: 3000,
 		historyApiFallback: true,
 		open: true
+	},
+	output: {
+		filename: 'bundle.js',
+		chunkFilename: 'bundle.js',
+		path: path.resolve(__dirname, 'dist'),
+		publicPath: '/'
+	},
+	module: {
+		rules: [
+			{
+				test: /\.css$/,
+				use: [
+					'style-loader', 'css-loader'
+				]
+			},
+			{
+				test: /\.scss$/,
+				use: [
+					'style-loader', 'css-loader', 'sass-loader'
+				]
+			},
+		]
 	}
 })

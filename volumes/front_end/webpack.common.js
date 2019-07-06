@@ -18,22 +18,9 @@ module.exports = {
 				loader: 'babel-loader'
 			}
 		},
-		{
-			test: /\.css$/,
-			use: [
-				'style-loader', 'css-loader'
-			]
-		}
 		]
 	},
-	output: {
-		filename: 'bundle.[contenthash].js',
-		chunkFilename: 'bundle.[contenthash].js',
-		path: path.resolve(__dirname, 'dist'),
-		publicPath: '/'
-	},
 	plugins: [
-	new CleanWebpackPlugin(),
 	new HtmlWebpackPlugin({
 		title: `${WEBSITE_NAME}`,
 		favicon: "./src/images/favicon.ico",
