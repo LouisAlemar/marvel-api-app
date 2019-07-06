@@ -4,7 +4,7 @@ const INITIAL_STATE = {
 	items: []
 }
 
-export default function character(state = INITIAL_STATE, action){
+export default function characters(state = INITIAL_STATE, action){
 	switch(action.type){
 		case Types.GET_CHARACTER_SUCCESS:{
 			return {
