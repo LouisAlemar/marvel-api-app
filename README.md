@@ -17,3 +17,15 @@ In order to get this app up and running, you'll need to follow these steps in or
         APP_MOUNT_ID=react-root
         WEBSITE_NAME={ANY NAME YOU DESIRE}
         ACCESS_TOKEN={YOUR ACCESS TOKEN}
+
+## Run App
+
+### Run the following commands
+
+* Start up docker container
+
+        .sh/up
+
+* Install all dependencies and start up webpack-dev-server
+
+        .sh/follow_front_end
