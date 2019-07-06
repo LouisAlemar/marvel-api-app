@@ -39,3 +39,7 @@ In order to get this app up and running, you'll need to follow these steps in or
 * List all docker containers
 
 		.sh/psa
+
+* Build production
+
+		.sh/build_prod
