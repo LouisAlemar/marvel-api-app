@@ -29,3 +29,13 @@ In order to get this app up and running, you'll need to follow these steps in or
 * Install all dependencies and start up webpack-dev-server
 
         .sh/follow_front_end
+
+### Additional Commands
+
+* Take down container
+
+		.sh/down
+
+* List all containers
+
+		.sh/psa
