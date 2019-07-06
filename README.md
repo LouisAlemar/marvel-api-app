@@ -11,12 +11,12 @@ In order to get this app up and running, you'll need to follow these steps in or
 
 ### Setting up variables
 
-* Create a `.env` file in root directory with following variables
+* Create a `.env` file in root directory with following variables. Make sure you replace `ANY NAME YOU DESIRE` and `YOUR ACCESS TOKEN`.
 
         NPM_SCRIPT=start
         APP_MOUNT_ID=react-root
-        WEBSITE_NAME={ANY NAME YOU DESIRE}
-        ACCESS_TOKEN={YOUR ACCESS TOKEN}
+        WEBSITE_NAME=ANY NAME YOU DESIRE
+        ACCESS_TOKEN=YOUR ACCESS TOKEN
 
 ## Run App
 
