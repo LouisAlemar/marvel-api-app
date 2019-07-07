@@ -77,8 +77,19 @@ $margin_20: 20px;
 				}
 				.right-column{
 					.info-header{
-						// text-decoration: underline;
 						border-bottom: 1px solid #000;
+					}
+					.power-stats-container{
+						.power-stat{
+							.power-stat-name-container{
+								display: flex;
+								align-items: center;
+								justify-content: space-between;
+								.power-stat-name{
+									text-transform: capitalize;
+								}
+							}
+						}
 					}
 				}
 			}

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Progress } from 'reactstrap';
 
 class CharacterModal extends Component{
 	constructor(props){
@@ -7,7 +7,8 @@ class CharacterModal extends Component{
 	}
 	
 	render(){
-		console.log(this.props.character.work)
+		console.log(this.props.character.powerstats)
+
 		return(
 			<div className="character-modal-container">
 				<Modal isOpen={this.props.state.modal} toggle={this.props.toggle} className={this.props.className}>
@@ -21,7 +22,9 @@ class CharacterModal extends Component{
 						<div className="right-column">
 							{/* BIO */}
 
-							<h4 className="info-header">Biography</h4>
+							{!Object.values(this.props.character.biography).every((val, i, arr) => val === '-' && val === arr[0]) &&
+								<h4 className="info-header">Biography</h4>
+							}
 
 							<div className="character-info">
 								<p><strong>Full Name:</strong> {this.props.character.biography['full-name']}</p>
@@ -56,8 +59,10 @@ class CharacterModal extends Component{
 
 							{/* APPEARANCE */}
 
-							<h4 className="info-header">Appearance</h4>
-							
+							{!Object.values(this.props.character.appearance).every((val, i, arr) => val === '-' && val === arr[0]) &&
+								<h4 className="info-header">Appearance</h4>
+							}
+
 							{this.props.character.appearance['gender'].indexOf('-') !== 0 &&
 								<div className="character-info">
 									<p><strong>Gender:</strong> {this.props.character.appearance['gender']}</p>
@@ -106,7 +111,9 @@ class CharacterModal extends Component{
 
 							{/* WORK */}
 
-							<h4 className="info-header">Work</h4>
+							{!Object.values(this.props.character.work).every((val, i, arr) => val === '-' && val === arr[0]) &&
+								<h4 className="info-header">Work</h4>
+							}
 
 							{this.props.character.work['occupation'].indexOf('-') !== 0 &&
 								<div className="character-info">
@@ -119,6 +126,43 @@ class CharacterModal extends Component{
 									<p><strong>Base:</strong> {this.props.character.work['base']}</p>
 								</div>
 							}
+
+							{/* CONNECTIONS */}
+							
+							{!Object.values(this.props.character.connections).every((val, i, arr) => val === '-' && val === arr[0]) &&
+								<h4 className="info-header">Connections</h4>
+							}
+
+							{this.props.character.connections['group-affiliation'].indexOf('-') !== 0 &&
+								<div className="character-info">
+									<p><strong>Group Affiliation:</strong> {this.props.character.connections['group-affiliation']}</p>
+								</div>
+							}
+
+							{this.props.character.connections['relatives'].indexOf('-') !== 0 &&
+								<div className="character-info">
+									<p><strong>Relatives:</strong> {this.props.character.connections['relatives']}</p>
+								</div>
+							}
+
+							{/* POWERSTATS */}
+
+							{!Object.values(this.props.character.powerstats).every((val, i, arr) => val === '-' && val === arr[0]) &&
+								<h4 className="info-header">Power Stats</h4>
+							}
+							
+							<div className="power-stats-container">
+								{Object.keys(this.props.character.powerstats).map((power, index) =>
+									<div className="power-stat" key={index}>
+										<div className="power-stat-name-container">
+											<div className="power-stat-name">{power}</div>
+											<div>{this.props.character.powerstats[power]} of 100</div>
+										</div>
+										<Progress value={this.props.character.powerstats[power]} max="100" />
+									</div>
+								)}
+							</div>
+
 						</div>
 					</ModalBody>
 					<ModalFooter>
