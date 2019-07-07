@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import CharacterModal from '../CharacterModal';
 
 class CharacterItem extends Component{
@@ -20,7 +19,6 @@ class CharacterItem extends Component{
 	}
 
 	render(){
-		// console.log(this.props.character)
 		return(
 			<div className="character-item" onClick={this.toggle}>
 				<div className="name-container">
@@ -29,7 +27,7 @@ class CharacterItem extends Component{
 				<div className="image-container">
 					<div className="character-pic" style={{backgroundImage: `url(${this.props.character.image.url})`}}></div>
 				</div>
-				<CharacterModal state={this.state} character={this.props.character} toggle={this.toggle} />
+				<CharacterModal className="character-modal-component" state={this.state} character={this.props.character} toggle={this.toggle} />
 			</div>
 		)
 	}

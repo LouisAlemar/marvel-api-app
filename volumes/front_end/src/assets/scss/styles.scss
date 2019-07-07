@@ -1,4 +1,9 @@
-$character-item-margin: 10px;
+// VARIABLES
+
+$margin_10: 10px;
+$margin_20: 20px;
+
+// APP CONTAINER
 
 .app-container{
 	margin: 0 auto;
@@ -7,12 +12,12 @@ $character-item-margin: 10px;
 	.character-list{
 		display: flex;
 		flex-wrap: wrap;
-		margin-left: #{$character-item-margin * -1};
-		margin-right: #{$character-item-margin * -1};
+		margin-left: #{$margin_10 * -1};
+		margin-right: #{$margin_10 * -1};
 		.character-item{
 			position: relative;
-			margin: $character-item-margin;
-			width: calc(33.333% - #{$character-item-margin * 2});
+			margin: $margin_10;
+			width: calc(33.333% - #{$margin_10 * 2});
 			background-color: #000;
 			&:hover{
 				cursor: pointer;
@@ -56,3 +61,28 @@ $character-item-margin: 10px;
 		}
 	}
 }
+
+// MODAL
+
+.modal{
+	.modal-dialog{
+		max-width: initial;
+		margin-left: $margin_20;
+		margin-right: $margin_20;
+		.modal-content{
+			.modal-body{
+				display: flex;
+				.left-column{
+					margin-right: $margin_10;
+				}
+				.right-column{
+					.info-header{
+						// text-decoration: underline;
+						border-bottom: 1px solid #000;
+					}
+				}
+			}
+		}
+	}
+}
+
