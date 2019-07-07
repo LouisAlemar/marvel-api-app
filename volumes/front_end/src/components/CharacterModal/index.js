@@ -7,7 +7,7 @@ class CharacterModal extends Component{
 	}
 	
 	render(){
-		console.log(this.props.character)
+		console.log(this.props.character.work)
 		return(
 			<div className="character-modal-container">
 				<Modal isOpen={this.props.state.modal} toggle={this.props.toggle} className={this.props.className}>
@@ -54,56 +54,71 @@ class CharacterModal extends Component{
 								</div>
 							}
 
-						{/* APPEARANCE */}
+							{/* APPEARANCE */}
 
-						<h4 className="info-header">Appearance</h4>
-						
-						{this.props.character.appearance['gender'].indexOf('-') !== 0 &&
-							<div className="character-info">
-								<p><strong>Gender:</strong> {this.props.character.appearance['gender']}</p>
-							</div>
-						}
-						
-						{this.props.character.appearance['eye-color'].indexOf('-') !== 0 &&
-							<div className="character-info">
-								<p><strong>Eye Color:</strong> {this.props.character.appearance['eye-color']}</p>
-							</div>
-						}
-						
-						{this.props.character.appearance['hair-color'].indexOf('-') !== 0 &&
-							<div className="character-info">
-								<p><strong>Hair Color:</strong> {this.props.character.appearance['hair-color']}</p>
-							</div>
-						}
-
-						{this.props.character.appearance['race'].indexOf('-') !== 0 &&
-							<div className="character-info">
-								<p><strong>Race:</strong> {this.props.character.appearance['race']}</p>
-							</div>
-						}
-
-						{!this.props.character.appearance['height'].includes('-') &&
-							<div className="character-info">
-								<span><strong>Height:</strong></span>
-								<ul>
-									{this.props.character.appearance['height'].map((height, index) => (
-										<li key={index}>{height}</li>
-									))}
-								</ul>
-							</div>
-						}
-
-						{!this.props.character.appearance['weight'].includes('-') &&
-							<div className="character-info">
-								<span><strong>Weight:</strong></span>
-								<ul>
-									{this.props.character.appearance['weight'].map((weight, index) => (
-										<li key={index}>{weight}</li>
-									))}
-								</ul>
-							</div>
-						}
+							<h4 className="info-header">Appearance</h4>
 							
+							{this.props.character.appearance['gender'].indexOf('-') !== 0 &&
+								<div className="character-info">
+									<p><strong>Gender:</strong> {this.props.character.appearance['gender']}</p>
+								</div>
+							}
+							
+							{this.props.character.appearance['eye-color'].indexOf('-') !== 0 &&
+								<div className="character-info">
+									<p><strong>Eye Color:</strong> {this.props.character.appearance['eye-color']}</p>
+								</div>
+							}
+							
+							{this.props.character.appearance['hair-color'].indexOf('-') !== 0 &&
+								<div className="character-info">
+									<p><strong>Hair Color:</strong> {this.props.character.appearance['hair-color']}</p>
+								</div>
+							}
+
+							{this.props.character.appearance['race'].indexOf('-') !== 0 &&
+								<div className="character-info">
+									<p><strong>Race:</strong> {this.props.character.appearance['race']}</p>
+								</div>
+							}
+
+							{!this.props.character.appearance['height'].includes('-') &&
+								<div className="character-info">
+									<span><strong>Height:</strong></span>
+									<ul>
+										{this.props.character.appearance['height'].map((height, index) => (
+											<li key={index}>{height}</li>
+										))}
+									</ul>
+								</div>
+							}
+
+							{!this.props.character.appearance['weight'].includes('-') &&
+								<div className="character-info">
+									<span><strong>Weight:</strong></span>
+									<ul>
+										{this.props.character.appearance['weight'].map((weight, index) => (
+											<li key={index}>{weight}</li>
+										))}
+									</ul>
+								</div>
+							}
+
+							{/* WORK */}
+
+							<h4 className="info-header">Work</h4>
+
+							{this.props.character.work['occupation'].indexOf('-') !== 0 &&
+								<div className="character-info">
+									<p><strong>Occupation:</strong> {this.props.character.work['occupation']}</p>
+								</div>
+							}
+
+							{this.props.character.work['base'].indexOf('-') !== 0 &&
+								<div className="character-info">
+									<p><strong>Base:</strong> {this.props.character.work['base']}</p>
+								</div>
+							}
 						</div>
 					</ModalBody>
 					<ModalFooter>
