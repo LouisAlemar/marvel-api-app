@@ -73,7 +73,11 @@ $margin_20: 20px;
 			.modal-body{
 				display: flex;
 				.left-column{
+					position: -webkit-sticky;
+					position: sticky;
+					top: 20px;
 					margin-right: $margin_20;
+					height: max-content;
 				}
 				.right-column{
 					.info-header{
