@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import {Alert} from 'reactstrap';
 
 import SearchForm from '../SearchForm';
 import CharacterList from '../CharacterList';
@@ -20,7 +21,11 @@ class App extends Component{
 		return(
 			<div className="app-container">
 				<SearchForm onSubmit={this.handleSubmit} />
-				<CharacterList characters={this.props.characters.items} />
+				{typeof this.props.characters.items !== 'undefined' ? (
+					<CharacterList characters={this.props.characters.items} />
+				) : (
+					<Alert color="danger">Character not found.</Alert>
+				)}
 			</div>
 		)
 	}
