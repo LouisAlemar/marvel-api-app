@@ -23,7 +23,7 @@ module.exports = {
 	plugins: [
 	new HtmlWebpackPlugin({
 		title: `${WEBSITE_NAME}`,
-		favicon: "./src/images/favicon.ico",
+		favicon: "./src/assets/images/favicon.ico",
 		template: './src/index.ejs',
 		appMountId: 'react-root'
 	}),
